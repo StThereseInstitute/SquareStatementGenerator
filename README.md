@@ -15,7 +15,7 @@ This is a WORK IN PROGRESS and made to fill MY SPECIFIC needs. The code is not p
 
 I provide it to y'all in hopes of making your lives a bit easier, and maybe giving Square a push to implement something similar into their Dashboard so that users don't have to hack together work-around for something so simple as creating a printable statement <nudge nudge, wink wink> :)
 
--- James
-St. Therese Institute of Faith and Mission
-Bruno, SK, Canada
-www.StTherese.ca
+-- James /
+St. Therese Institute of Faith and Mission /
+Bruno, SK, Canada /
+www.StTherese.ca 

@@ -1,2 +1,8 @@
 # SquareStatementGenerator
-I needed to generate a printable statement for my company's Square account. Since Square does not offer this functionality *nor* have they made a move to add it to their website after many requests and more than a year of time, I have created my own way of handling it all.
+I needed to generate a printable statement for my organization's Square account. Since Square does not offer this functionality *nor* have they made a move to add it to their dashboard in more than 4 years (see thread https://www.sellercommunity.com/t5/Questions-How-To/How-do-I-download-or-otherwise-generate-monthly-statements/td-p/2473), I decided to route my frustration into action instead of brooding, and created my own way of handling it.
+
+This project is written in PHP and requires the code to be loaded onto a webserver.
+
+This is a WORK IN PROGRESS and made to fill MY SPECIFIC needs. The code is not polished, not always commented, and possibly full of coding faux pas... so use at your own risk! If you can improve the code or add to the functionality, please do and submit your updates! And lastly, I am not able to customize the code for anyone -- sorry :) 
+
+I provide it to y'all in hopes of making your lives a bit easier, and maybe giving Square a push to implement something similar into their Dashboard so that users don't have to hack together work-around for something so simple as creating a printable statement!! (oops -- that's a bit of the frustration leaking out)

@@ -14,3 +14,8 @@ USAGE INSTRUCTIONS:
 This is a WORK IN PROGRESS and made to fill MY SPECIFIC needs. The code is not polished, not always commented, and possibly full of coding faux pas... so use at your own risk! If you can improve the code or add to the functionality, please do and submit your updates! And lastly, I am not able to customize the code for anyone -- sorry :) 
 
 I provide it to y'all in hopes of making your lives a bit easier, and maybe giving Square a push to implement something similar into their Dashboard so that users don't have to hack together work-around for something so simple as creating a printable statement <nudge nudge, wink wink> :)
+
+-- James
+St. Therese Institute of Faith and Mission
+Bruno, SK, Canada
+www.StTherese.ca

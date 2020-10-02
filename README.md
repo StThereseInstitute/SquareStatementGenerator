@@ -5,7 +5,7 @@ Prerequisit: This project is written in PHP and requires the code to first be *u
 
 USAGE INSTRUCTIONS: 
 1) Go to squareup.com/dashboard/sales/transactions, and 
-2) ...select [ EXPORT > Transactions CSV ] then [ Open with > Notepad ] (on Windows; for other OS's, use your built-in text editor)... or Save the file and open locally. 
+2) ...set your date range, select [ EXPORT > Transactions CSV ] then [ Open with > Notepad ] (on Windows; for other OS's, use your built-in text editor)... or Save the file and open locally. 
 3) When the CSV is open in Notepad/etc., [ Select All > Copy ] then
 4) ...Web-browse to where ever you've uploaded the script files (eg: www.StTherese.ca/MySquareStatements/index.php).
 5) [ Paste ] the contents of the CSV into the webpage's textbox and

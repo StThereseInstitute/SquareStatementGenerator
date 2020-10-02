@@ -23,7 +23,7 @@ require_once('config.php');
 		<p>&nbsp;		</p>
 
 		<p>
-			<label for="CSV"><strong>Go to <a href="https://squareup.com/dashboard/sales/transactions">squareup.com/dashboard/sales/transactions</a>, and select [EXPORT &gt; Transactions CSV] then [Open with &gt; Notepad]. <br>
+			<label for="CSV"><strong>Go to <a href="https://squareup.com/dashboard/sales/transactions">squareup.com/dashboard/sales/transactions</a>, set your date range and select [EXPORT &gt; Transactions CSV] then [Open with &gt; Notepad]. <br>
 				When the CSV displays in NotePad, [Select All &gt; Copy] then [Paste] the contents of the CSV here:</strong><br>
 			</label>
 			<textarea name="CSV" rows="10" id="CSV"></textarea>

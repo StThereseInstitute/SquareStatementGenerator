@@ -88,7 +88,11 @@ echo "</pre></div>";
 					if ($_POST['SortOrder']=="DESC") echo end($transactions)['Date'].' – '.$transactions[0]['Date'];
 					if ($_POST['SortOrder']=="ASC") echo $transactions[0]['Date'].' – '.end($transactions)['Date'];
 				} else {
-					echo (new DateTime($transactions[0]['Date']))->format('F 01–t, Y');
+					// Force DD/MM/YY date to DD-MM-20YY instead for PHP compatibility
+					$statementdate=explode('/',$transactions[0]['Date']);
+					$statementdate[2] =+ 2000; // not Y2.1K compatible. Will only work from 2000-2099, but I *really* hope Square will provide statements by then!?!?!??! Maybe?!?!?!
+					$statementdate = strtotime(implode("-",$statementdate));
+					echo date('F 01–t, Y', $statementdate);
 				}
 			 	echo '<br /><em style="font-size:0.8em;">(batch close: '.str_pad($batchclose_hour, 2, '0', STR_PAD_LEFT).':00 daily)</em>'; ?>
 	

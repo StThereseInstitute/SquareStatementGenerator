@@ -71,7 +71,7 @@ echo "</pre></div>";
 <head>
 <meta charset="utf-8">
 <title>Square Statement</title>
-<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="styles.css?preventchache=<?php echo mt_rand(); ?>" rel="stylesheet" type="text/css">
 <!-- <link href="https://fonts.googleapis.com/css?family=Almarai|Roboto&display=swap" rel="stylesheet"> -->
 <!-- <script src="https://kit.fontawesome.com/20e9d6cd18.js" crossorigin="anonymous"></script> --> 
 </head>

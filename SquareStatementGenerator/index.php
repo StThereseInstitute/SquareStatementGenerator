@@ -23,7 +23,7 @@ require_once('config.php');
 		<p>&nbsp;		</p>
 
 		<p>
-			<label for="CSV"><strong>Go to <a href="https://squareup.com/dashboard/sales/transactions">squareup.com/dashboard/sales/transactions</a>, set your date range and select [EXPORT &gt; Transactions CSV] then [Open with &gt; Notepad]. <br>
+			<label for="CSV"><strong>Go to <a href="https://squareup.com/dashboard/sales/transactions" target="_blank">squareup.com/dashboard/sales/transactions</a>, set your date range and select [EXPORT &gt; Transactions CSV] then [Open with &gt; Notepad]. <br>
 				When the CSV displays in NotePad, [Select All &gt; Copy] then [Paste] the contents of the CSV here:</strong><br>
 			</label>
 			<textarea name="CSV" rows="10" id="CSV"></textarea>
@@ -71,7 +71,7 @@ require_once('config.php');
 &nbsp;		</div>
 		
 		
-		<div><strong>Which transactions types do you want to show in the report?</strong><br />
+		<div><strong>Which transaction types do you want to show in the report?</strong><br />
 			<?php
 			
 			foreach ($CardBrands as $CardBrand=>$values) {
@@ -81,7 +81,18 @@ require_once('config.php');
 				<?php echo $CardBrand; ?> <i class="<?php echo $values['icon'] ?>" style="display:inline-block;"></i>
 			</label> &nbsp;&nbsp;
 			<?php } ?>
-			
+			<div>
+				<script language="javascript" type="text/javascript" >
+					function checkall(tf){
+						var cbarray = document.getElementsByName('ShowTxnTypes[]');
+    					for(var i = 0; i < cbarray.length; i++){
+							cbarray[i].checked = tf;
+						}
+					}
+				</script>
+				<a href="javascript:checkall(false);">Uncheck all</a> &nbsp;|&nbsp; <a href="javascript:checkall(true);">Check All</a><br>
+				<em style="font-size:0.8em;">(To add additional or remove transactions types, edit the $CardBrands array in config.php)</em>
+		  </div>
 		</div>
 		
 			</p></div></div>

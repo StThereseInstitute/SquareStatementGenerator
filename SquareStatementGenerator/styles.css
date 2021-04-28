@@ -1,10 +1,10 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Almarai|Roboto&display=swap');
 h1, h2, h3, h4 {font-family: 'Almarai', sans-serif;}
-body {font-family: 'Roboto', sans-serif;}
+body {font-family: 'Roboto', sans-serif; font-size:0.8em;}
 
 
-.logo, .logo td {text-align: right; padding-right: 10px;  font-size: 24px; line-height: 1em; font-family: 'Almarai', sans-serif; color:#333;}
+.logo, .logo td {text-align: right; padding-right: 10px;  font-size: 1.3em; line-height: 1em; font-family: 'Almarai', sans-serif; color:#333;}
 .logo img {width:300px; }
 
 #CSVpaste {width:100%; text-align: center;}
@@ -14,7 +14,8 @@ body {font-family: 'Roboto', sans-serif;}
 .options_wrapper {background-color: #F6F6F6;}
 
 
-.wrap_table > thead tr th {font-size:2em; padding-bottom: 20px; }
+.wrap_table {width: 100%;}
+.wrap_table > thead tr th {font-size:2em; padding-bottom: 20px; text-align: left; padding-left:50px; }
 .wrap_table > tbody {position: relative; top:-70px;}
 .report_date {background-color: #737373; color:#FFF; padding:3px 10px; font-weight: bold;  }
 .report {margin-left: 10px; width:100%;}
@@ -22,7 +23,8 @@ body {font-family: 'Roboto', sans-serif;}
 .report_row:nth-child(even) {background-color: #F3F3F3;}
 .report_row td {line-height: 1.1em; vertical-align: middle; padding:3px 10px; min-height: 40px;}
 .report_row td, .report_head th {border-bottom: solid #667 1px;}
-.report_cardbrand {font-size: 10px; line-height: 10px !important; width:60px; padding-left: 10px;}
+.report_cardbrand {font-size: 0.7em; line-height: 0.65em; width:60px !important; max-width: 60px; padding-left: 10px;}
+.report_customername {float:left; width:250px;}
 [class^="icon-tender"] {
 	position: relative;
 	top: -1px;
@@ -54,8 +56,8 @@ body {font-family: 'Roboto', sans-serif;}
 	background-position: 0 -726px;
 }
 .report_time, .report_gross, .report_net, .report_fee {padding-left: 10px; width:70px;}
-.report_sum {padding-left: 10px; float:right; margin-left: 10px; font-size: initial; font-family: initial; width:70px;}
-.report_totalsums {width:280px; margin-bottom: 20px; border:1px solid #999; background-color: #DDD;}
+.report_sum {padding-left: 10px; float:right; margin-left: 10px; width:70px;}
+.report_totalsums {width:280px; margin-bottom: 20px; margin-top:10px; border:1px solid #999; background-color: #DDD;}
 .report_totalsum {border:solid #CCC 1px; padding: 3 5px !important; width:33%; background-color: #F9F9F9;}
 
 .neg_money {color:red; font-style: italic;}

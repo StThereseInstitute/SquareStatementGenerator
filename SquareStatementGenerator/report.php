@@ -209,10 +209,14 @@ echo "</pre></div>";
 					<tr class='report_row'>
 						<td class="report_cardbrand">
 							<i class="<?php echo $CardBrands[$txn_row['Card Brand']]['icon']; ?>"></i>
-							<?php 
-								if ($txn_row['Card Brand']) {echo $txn_row['PAN Suffix'];} 
-								else {echo "Cash Sale";} echo '<br />'.$txn_row['Customer Name']; 
+							<div class="report_cardbrand_text">
+							<?php if ($txn_row['Card Brand']) {echo $txn_row['PAN Suffix'];} 
+									else {echo "Cash Sale";} 
 							?>
+							</div>
+							<div class="report_customername">
+								<?php echo $txn_row['Customer Name'];?>
+							</div>
 						</td>
 						<td class='report_time'><?php echo $txn_row['Time']; ?></td>
 						<td class='report_disc'><?php echo $txn_row['Description']; ?></td>

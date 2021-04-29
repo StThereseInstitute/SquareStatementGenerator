@@ -58,7 +58,20 @@ require_once('config.php');
 					<option value="RANGE">Date Range from CSV</option>
 			</select>
 			<br>
-			<em style="font-weight: normal; font-size: 0.8em;">"Monthly" will title the according to the earliest transaction date in the CSV data.<br>Please use "Date Range" if your CSV contains more than one calendar month worth of tranactions.</em><br>
+		  <em style="font-weight: normal; font-size: 0.8em;">"Monthly" will title the report according to the  transaction date from  Record 1 in the CSV data.<br>
+		  Please use "Date Range" if your CSV contains more than one calendar month worth of tranactions or if you want to display the exact date range.</em><br>
+&nbsp;		</div>
+		<div>
+				<label for="SortOrder"><strong>What DATE FORMAT does your statement use?</strong> <br>
+			</label>
+			<select name="DateFormat" id="DateFormat">
+			  <option value="DMY" selected="selected">DD/MM/YY or YYYY</option>
+			  <option value="MDY">MM/DD/YY or YYYY</option>
+			  <option value="YMD">YY/MM/DD or YYYY</option>
+            </select>
+			<br>
+			<em style="font-weight: normal; font-size: 0.8em;">
+			Script will autodetect YY or YYYY and whether a '-' or '/' seperator is used between the M D Y values.</em><br>
 &nbsp;		</div>
 		<div>
 				<label for="SortOrder"><strong>Sort order to display the transactions in?</strong><br>

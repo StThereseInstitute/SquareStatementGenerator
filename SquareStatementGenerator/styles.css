@@ -15,11 +15,12 @@ body {font-family: 'Roboto', sans-serif; font-size:0.8em;}
 
 
 .wrap_table {width: 100%;}
-.wrap_table > thead tr th {font-size:2em; padding-bottom: 20px; text-align: left; padding-left:50px; }
-.wrap_table > tbody {position: relative; top:-70px;}
+.wrap_table > thead tr th {font-size:1.8em; padding-bottom: 33px; text-align: left; padding-left:10px; }
+.wrap_table > tbody {position: relative; top:-90px;}
 .report_date {background-color: #737373; color:#FFF; padding:3px 10px; font-weight: bold;  }
 .report {margin-left: 10px; width:100%;}
 .report_head th {font-size:0.7em !important; padding-bottom: 0px !important;}
+.report_rows {background-color: #FFF;}
 .report_row:nth-child(even) {background-color: #F3F3F3;}
 .report_row td {line-height: 1.1em; vertical-align: middle; padding:3px 10px; min-height: 40px;}
 .report_row td, .report_head th {border-bottom: solid #667 1px;}
@@ -35,29 +36,18 @@ body {font-family: 'Roboto', sans-serif; font-size:0.8em;}
 	display: block;
 }
 .summary [class^="icon-tender"] {display: inline-block; transform: scale(0.67);}
-.icon-tender_debit {
-	
-	background-position: 0 -378px;
-}
-.icon-tender_mastercard {
-	background-position: 0 -508px;
-}
-.icon-tender_visa {
-	background-position: 0 -851px;
-}
-.icon-tender_amex {
-	background-position: 0 -40px;
-}
-.icon-tender_cash {
-	background-position: 0 -153px;
-	height: 20px;
-}
-.icon-tender_other {
-	background-position: 0 -726px;
-}
+.icon-tender_debit { background-position: 0 -378px; }
+.icon-tender_mastercard { background-position: 0 -508px; }
+.icon-tender_visa {	background-position: 0 -851px;}
+.icon-tender_amex { background-position: 0 -40px; }
+.icon-tender_cash { background-position: 0 -153px; 	height: 20px;}
+.icon-tender_other {	background-position: 0 -726px;}
+/* if adding other transaction types, include additional CSS for the relavant "icon-tenders" here */
+
 .report_time, .report_gross, .report_net, .report_fee {padding-left: 10px; width:70px;}
 .report_sum {padding-left: 10px; float:right; margin-left: 10px; width:70px;}
 .report_totalsums {width:280px; margin-bottom: 20px; margin-top:10px; border:1px solid #999; background-color: #DDD;}
 .report_totalsum {border:solid #CCC 1px; padding: 3 5px !important; width:33%; background-color: #F9F9F9;}
+.report_totalsums_wrap .report_totalsums {width:270px; padding-left: 0;}
 
 .neg_money {color:red; font-style: italic;}

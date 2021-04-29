@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Error reporting ON
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -77,6 +77,7 @@ echo "</pre></div>";
 </head>
 
 <body>
+	<!-- <div style="background: #F00; color:#FFF; text-align: center; font-size:16px;"><h1 style="display: inline-block; margin:10px;">NOTE: </h1>&nbsp;Admin is working on this script right now. It may not work as expected until this notice is removed!!</div> -->
 	<div class="logo"><table align="center">
 <tr>
 	<td align="right"><span style="font-weight: 100;">custom<br />
@@ -89,15 +90,38 @@ echo "</pre></div>";
 					if ($_POST['SortOrder']=="ASC") echo $transactions[0]['Date'].' – '.end($transactions)['Date'];
 				} else {
 					// Force DD/MM/YY date to DD-MM-20YY instead for PHP compatibility
-					$statementdate=explode('/',$transactions[0]['Date']);
-					$statementdate[2] =+ 2000; // not Y2.1K compatible. Will only work from 2000-2099, but I *really* hope Square will provide statements by then!?!?!??! Maybe?!?!?!
+					if (strpos($transactions[0]['Date'],'-')!== false) $sep='-';
+						elseif (strpos($transactions[0]['Date'],'/')!== false) $sep='/';
+							else die('Error in date formatting. Cannot detect "-" or "/".');
+					$statementdate = array ('D'=>'','M'=>'','Y'=>'');
+					$statementdatetemp=explode($sep,$transactions[0]['Date']);
+					switch ($_POST['DateFormat']){
+						case "DMY": 
+							$statementdate['D'] = ($statementdatetemp[0]);
+							$statementdate['M'] = ($statementdatetemp[1]);
+							$statementdate['Y'] = ($statementdatetemp[2]);
+							break;
+						case "MDY": 
+							$statementdate['M'] = ($statementdatetemp[0]);
+							$statementdate['D'] = ($statementdatetemp[1]);
+							$statementdate['Y'] = ($statementdatetemp[2]);
+							break;
+						case "YMD": 
+							$statementdate['Y'] = ($statementdatetemp[0]);
+							$statementdate['M'] = ($statementdatetemp[1]);
+							$statementdate['D'] = ($statementdatetemp[2]);
+							break;
+					}
+					if (intval($statementdate['M']) > 12) die ('Oops! The Month in the selected date format is greater than 12... Something must be wrong :('); // quick eror-catch, making sure Month is actually less than 12
+					if (intval($statementdate['Y']) < 100) $statementdate['Y'] = $statementdate['Y'] + 2000; // Convert YY to YYYY; *not* Y2.1K compatible. Will only work from 2000-2099, but I *really* hope Square will provide statements by then!?!?!??! Maybe?!?!?!
 					$statementdate = strtotime(implode("-",$statementdate));
 					echo date('F 01–t, Y', $statementdate);
+					
 				}
 			 	echo '<br /><em style="font-size:0.8em;">(batch close: '.str_pad($batchclose_hour, 2, '0', STR_PAD_LEFT).':00 daily)</em>'; ?>
 	
 			
-		</th></tr></thead><tbody><tr><td class="report_totalsums_wrap">
+		</th></tr></thead><tbody class="report_totalsums_wrap"><tr><td class="report_totalsums_wrap">
 		<table class="report_sum report_totalsums">
 		<thead class="report_head">
 			<tr>
@@ -114,7 +138,8 @@ echo "</pre></div>";
 		<td class="report_totalsum"><div id="report_totalsum-Fee">-</div></td>
 		<td class="report_totalsum"><div id="report_totalsum-Net">-</div></td>
 		</td></tr></tbody>
-	</table></td></tr></tbody>
+	</table></td></tr>
+</tbody><tbody class="report_rows" >
 	<?php 
 	$total_sumGross = 0;
 	$total_sumFee = 0;
